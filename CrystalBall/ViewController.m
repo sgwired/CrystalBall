@@ -46,4 +46,25 @@
    NSUInteger index = arc4random_uniform(self.perdictionArray.count);
     self.predictionLabel.text = [self.perdictionArray objectAtIndex:index];
 }
+
+- (BOOL) canBecomeFirstResponder {
+    return YES;
+}
+
+-(void) motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event{
+    self.predictionLabel.text = @"";
+}
+
+- (void) motionCancelled:(UIEventSubtype)motion withEvent:(UIEvent *)event{
+    NSLog(@"motion cancelled");
+}
+
+- (void) motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event {
+    if (motion == UIEventSubtypeMotionShake) {
+        NSUInteger index = arc4random_uniform(self.perdictionArray.count);
+        self.predictionLabel.text = [self.perdictionArray objectAtIndex:index];
+    }
+
+}
 @end
+
