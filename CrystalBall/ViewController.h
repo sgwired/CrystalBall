@@ -11,7 +11,7 @@
 @interface ViewController : UIViewController{
 
 }
-- (IBAction)buttonPressed:(UIButton *)sender;
+- (void) makePerdiction;
 @property (strong, nonatomic) IBOutlet UILabel *predictionLabel;
 @property (strong, nonatomic) NSArray *perdictionArray;
 

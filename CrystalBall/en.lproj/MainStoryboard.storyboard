@@ -21,29 +21,11 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Bh-H5-fIF">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="37" id="cIr-Jv-XFu"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" image="button_bg_off.png">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted" image="button_bg_on.png">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="buttonPressed:" destination="2" eventType="touchUpInside" id="psd-Gp-AYr"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="cSv-Ff-e80" firstAttribute="top" secondItem="3" secondAttribute="top" constant="239" id="8BG-VH-PKW"/>
-                            <constraint firstItem="9Bh-H5-fIF" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Eo0-0j-Gmp"/>
                             <constraint firstItem="cSv-Ff-e80" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="64" id="JTh-fH-3vq"/>
-                            <constraint firstAttribute="bottom" secondItem="9Bh-H5-fIF" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="T0B-SI-cTZ"/>
                         </constraints>
                     </view>
                     <connections>
@@ -55,10 +37,6 @@
             <point key="canvasLocation" x="6" y="95"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="button_bg_off.png" width="280" height="42"/>
-        <image name="button_bg_on.png" width="280" height="42"/>
-    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

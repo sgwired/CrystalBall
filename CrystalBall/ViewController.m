@@ -41,9 +41,9 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)buttonPressed:(UIButton *)sender {
 
-   NSUInteger index = arc4random_uniform(self.perdictionArray.count);
+- (void) makePerdiction {
+    NSUInteger index = arc4random_uniform(self.perdictionArray.count);
     self.predictionLabel.text = [self.perdictionArray objectAtIndex:index];
 }
 
@@ -61,10 +61,21 @@
 
 - (void) motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event {
     if (motion == UIEventSubtypeMotionShake) {
-        NSUInteger index = arc4random_uniform(self.perdictionArray.count);
-        self.predictionLabel.text = [self.perdictionArray objectAtIndex:index];
+        [self makePerdiction];
     }
 
 }
+
+- (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    self.predictionLabel.text = @"";
+}
+
+- (void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
+ 
+    [self makePerdiction];
+   
+}
+
+
 @end
 
